@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32"><Configuration>Debug</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion><Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2A4F4692-1815-4218-9650-7BFC772C827A}</ProjectGuid>
+    <RootNamespace>RRJ</RootNamespace><WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType><UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset><CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)..\..\..\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\_build\x86\Debug\</IntDir>
+    <TargetName>RRJ</TargetName><LinkIncremental>false</LinkIncremental>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand><DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel><TreatWarningAsError>true</TreatWarningAsError>
+      <SDLCheck>true</SDLCheck><Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary><DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs><LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)RRJ-compile.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link><SubSystem>Console</SubSystem><TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation><ProgramDatabaseFile>$(IntDir)RRJ.pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)RRJ.lib</ImportLibrary>
+      <AdditionalDependencies>user32.lib;gdi32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="main.c" /><ClCompile Include="..\..\wip.c" /><ClCompile Include="audio_waveout.c" /><ClCompile Include="..\..\fixed_math.c" />
+    <ClCompile Include="..\..\psx_memory.c" /><ClCompile Include="..\..\packet.c" /><ClCompile Include="..\..\flare.c" />
+    <ClCompile Include="platform.c" />
+    <ClCompile Include="..\..\psx.c" />
+    <ClCompile Include="..\..\raster.c" />
+    <ClCompile Include="..\..\gpu.c" />
+    <ClCompile Include="..\..\race_step.c" />
+    <ClCompile Include="..\..\race_global.c" />
+    <ClCompile Include="..\..\race_services.c" />
+    <ClCompile Include="..\..\race_frame.c" />
+    <ClCompile Include="..\..\race_pause.c" />
+    <ClCompile Include="..\..\menu_navigation.c" />
+    <ClCompile Include="..\..\audio.c" />
+    <ClCompile Include="..\..\menu_input.c" /><ClCompile Include="..\..\submenu.c" /><ClCompile Include="..\..\menu_flags.c" /><ClCompile Include="..\..\menu_reset.c" />
+    <ClCompile Include="..\..\menu_draw.c" />
+    <ClCompile Include="..\..\menu_sprite.c" />
+    <ClCompile Include="..\..\resource_lookup.c" />
+    <ClCompile Include="..\..\resource.c" />
+    <ClCompile Include="..\..\font.c" />
+    <ClCompile Include="..\..\menu_item.c" />
+    <ClCompile Include="..\..\menu_hint.c" />
+    <ClCompile Include="..\..\entry_kind.c" />
+    <ClCompile Include="..\..\resource_record.c" />
+    <ClCompile Include="..\..\menu_center.c" />
+    <ClCompile Include="..\..\menu_info.c" />
+    <ClCompile Include="..\..\word_wrap.c" />
+    <ClCompile Include="..\..\text_id.c" />
+    <ClCompile Include="..\..\info_panel.c" />
+    <ClCompile Include="..\..\menu_video.c" />
+    <ClCompile Include="..\..\menu_render.c" />
+    <ClCompile Include="..\..\resource_select.c" />
+    <ClCompile Include="..\..\resource_groups.c" />
+    <ClCompile Include="..\..\resource_value.c" />
+    <ClCompile Include="..\..\resource_next.c" />
+    <ClCompile Include="..\..\resource_apply.c" />
+    <ClCompile Include="..\..\menu_first.c" />
+    <ClCompile Include="..\..\resource_refresh.c" />
+    <ClCompile Include="..\..\menu_update.c" />
+    <ClCompile Include="..\..\menu_frame.c" />
+    <ClCompile Include="..\..\menu_transition.c" />
+    <ClCompile Include="..\..\pad.c" />
+    <ClCompile Include="..\..\pad_service.c" />
+    <ClCompile Include="..\..\pad_poll.c" />
+    <ClCompile Include="..\..\menu_latch.c" />
+    <ClCompile Include="..\..\input.c" />
+    <ClCompile Include="..\..\vblank.c" />
+    <ClCompile Include="..\..\audio_flush.c" />
+    <ClCompile Include="..\..\menu_cleanup.c" />
+    <ClCompile Include="..\..\menu_loop.c" />
+    <ClCompile Include="..\..\music_stop.c" /><ClCompile Include="..\..\music_start.c" />
+    <ClCompile Include="..\..\attract.c" />
+    <ClCompile Include="..\..\menu_phase.c" />
+    <ClCompile Include="..\..\video_stop.c" />
+    <ClCompile Include="..\..\screen.c" />
+    <ClCompile Include="..\..\screen_env.c" />
+    <ClCompile Include="..\..\video_phase.c" /><ClCompile Include="..\..\video_tick.c" /><ClCompile Include="..\..\video_preview.c" />
+    <ClCompile Include="..\..\spu.c" />
+    <ClCompile Include="..\..\audio\spu_core.c" />
+    <ClCompile Include="..\..\menu.c" /><ClCompile Include="..\..\dummy.c" />
+  </ItemGroup>
+  <ItemGroup><ClInclude Include="..\..\fixed_math.h" /><ClInclude Include="..\..\types.h" />
+    <ClInclude Include="..\..\psx_memory.h" /><ClInclude Include="..\..\packet.h" /><ClInclude Include="..\..\flare.h" />
+    <ClInclude Include="platform.h" /><ClInclude Include="..\..\psx.h" /><ClInclude Include="..\..\raster.h" />
+    <ClInclude Include="..\..\gpu.h" />
+    <ClInclude Include="..\..\menu_navigation.h" />
+    <ClInclude Include="..\..\audio.h" />
+    <ClInclude Include="..\..\menu_input.h" /><ClInclude Include="..\..\submenu.h" /><ClInclude Include="..\..\menu_flags.h" /><ClInclude Include="..\..\menu_reset.h" />
+    <ClInclude Include="..\..\menu_draw.h" />
+    <ClInclude Include="..\..\menu_sprite.h" />
+    <ClInclude Include="..\..\resource_lookup.h" />
+    <ClInclude Include="..\..\resource.h" />
+    <ClInclude Include="..\..\font.h" />
+    <ClInclude Include="..\..\menu_item.h" />
+    <ClInclude Include="..\..\menu_hint.h" />
+    <ClInclude Include="..\..\entry_kind.h" />
+    <ClInclude Include="..\..\resource_record.h" />
+    <ClInclude Include="..\..\menu_center.h" />
+    <ClInclude Include="..\..\menu_info.h" />
+    <ClInclude Include="..\..\word_wrap.h" />
+    <ClInclude Include="..\..\text_id.h" />
+    <ClInclude Include="..\..\info_panel.h" />
+    <ClInclude Include="..\..\menu_video.h" />
+    <ClInclude Include="..\..\menu_render.h" />
+    <ClInclude Include="..\..\resource_select.h" />
+    <ClInclude Include="..\..\resource_groups.h" />
+    <ClInclude Include="..\..\resource_value.h" />
+    <ClInclude Include="..\..\resource_next.h" />
+    <ClInclude Include="..\..\resource_apply.h" />
+    <ClInclude Include="..\..\menu_first.h" />
+    <ClInclude Include="..\..\resource_refresh.h" />
+    <ClInclude Include="..\..\menu_update.h" />
+    <ClInclude Include="..\..\menu_frame.h" />
+    <ClInclude Include="..\..\menu_transition.h" />
+    <ClInclude Include="..\..\pad.h" />
+    <ClInclude Include="..\..\pad_service.h" />
+    <ClInclude Include="..\..\pad_poll.h" />
+    <ClInclude Include="..\..\menu_latch.h" />
+    <ClInclude Include="..\..\input.h" />
+    <ClInclude Include="..\..\vblank.h" />
+    <ClInclude Include="..\..\audio_flush.h" />
+    <ClInclude Include="..\..\menu_cleanup.h" />
+    <ClInclude Include="..\..\menu_loop.h" />
+    <ClInclude Include="..\..\music_stop.h" /><ClInclude Include="..\..\music_start.h" />
+    <ClInclude Include="..\..\attract.h" />
+    <ClInclude Include="..\..\menu_phase.h" />
+    <ClInclude Include="..\..\video_stop.h" />
+    <ClInclude Include="..\..\screen.h" />
+    <ClInclude Include="..\..\screen_env.h" />
+    <ClInclude Include="..\..\video_phase.h" /><ClInclude Include="..\..\video_tick.h" /><ClInclude Include="..\..\video_preview.h" />
+    <ClInclude Include="..\..\spu.h" /><ClInclude Include="audio_waveout.h" />
+    <ClInclude Include="..\..\audio\spu_core.h" />
+    <ClInclude Include="..\..\audio\spu_gaussian.h" />
+    <ClInclude Include="..\..\audio\sample.h" />
+    <ClInclude Include="..\..\menu.h" /><ClInclude Include="..\..\dummy.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
